@@ -31,7 +31,7 @@ function StartTerm()
   setlocal listchars=tab:\ \ 
 endfunction
 
-" Colors
+" COLORS
 " Darks / Mids
 " color molokai
 " color desert
@@ -41,10 +41,9 @@ endfunction
 " color darkblue2
 " color freya
 " color tango
-color vwilight
-
-"color solarized
-"set background=light
+" color vwilight
+set background=dark
+color solarized
 
 " Lights
 " color eclipse
