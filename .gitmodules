@@ -22,3 +22,48 @@
 [submodule "bundle/CommandT"]
 	path = bundle/CommandT
 	url = https://github.com/wincent/Command-T.git
+[submodule "bundle/Ack"]
+	path = bundle/Ack
+	url = git://github.com/mileszs/ack.vim.git
+[submodule "bundle/easymotion"]
+	path = bundle/easymotion
+	url = https://github.com/Lokaltog/vim-easymotion.git
+[submodule "bundle/scratch"]
+	path = bundle/scratch
+	url = https://github.com/kana/vim-scratch.git
+[submodule "bundle/tcomment"]
+	path = bundle/tcomment
+	url = https://github.com/vim-scripts/tComment.git
+[submodule "bundle/git"]
+	path = bundle/git
+	url = https://github.com/tpope/vim-git.git
+[submodule "bundle/indent-object"]
+	path = bundle/indent-object
+	url = https://github.com/michaeljsmith/vim-indent-object.git
+[submodule "bundle/javascript"]
+	path = bundle/javascript
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule "bundle/surround"]
+	path = bundle/surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule "bundle/zoomwin"]
+	path = bundle/zoomwin
+	url = https://github.com/vim-scripts/ZoomWin.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = https://github.com/msanders/snipmate.vim.git
+[submodule "bundle/snipmate-snippets"]
+	path = bundle/snipmate-snippets
+	url = https://github.com/scrooloose/snipmate-snippets.git
+[submodule "bundle/searchfold"]
+	path = bundle/searchfold
+	url = https://github.com/vim-scripts/searchfold.vim.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/gist"]
+	path = bundle/gist
+	url = https://github.com/mattn/gist-vim.git
