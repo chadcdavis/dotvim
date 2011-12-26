@@ -10,3 +10,6 @@
 [submodule "bundle/align"]
 	path = bundle/align
 	url = https://github.com/tsaleh/vim-align.git
+[submodule "bundle/color-solarized"]
+	path = bundle/color-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
