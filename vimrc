@@ -15,13 +15,17 @@ set softtabstop=4
 set expandtab
 set list listchars=tab:\ \ ,trail:·
 
+" Status bar
+set laststatus=2
+
+" Set encoding
+set encoding=utf-8
+
+set visualbell
+
 " Swap the ` and ' for marker jumping
 nnoremap ' `
 nnoremap ` '
-
-" Snippet stuff
-ino <silent> <c-j> <c-r>=TriggerSnippet()<cr>
-snor <silent> <c-j> <esc>i<right><c-r>=TriggerSnippet()<cr>
 
 " Searching
 set hlsearch
@@ -37,13 +41,6 @@ map <Leader>n :NERDTreeToggle<CR>
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 
-" Status bar
-set laststatus=2
-
-" Set encoding
-set encoding=utf-8
-
-set visualbell
 
 " Splits
 map <C-J> <C-W>j<C-W>_
@@ -67,10 +64,8 @@ function s:setupMarkup()
   map <buffer> <Leader>p :Hammer<CR>
 endfunction
 
-
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-
 
 " Filetypes
 au BufNewFile,BufRead *.{code,view,phtml} set filetype=php.html
@@ -113,9 +108,6 @@ let g:gist_open_browser_after_post = 1
 " Use modeline overrides
 set modeline
 set modelines=10
-
-" Default color scheme
-color desert
 
 " Directories for swp files
 set backupdir=~/.vim/backup
