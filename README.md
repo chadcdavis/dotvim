@@ -23,3 +23,8 @@ Add packages as git submodule pathogen bundles
 
 `git submodule init && git submodule update`
 
+Command-T Compilation on MacVim
+-------------------------------
+
+/usr/bin/ruby extconf.rb (point to system)
+make clean && make
