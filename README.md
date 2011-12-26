@@ -10,9 +10,9 @@ This organization is based off of [Vim Casts #27: Synchronizing plugins with git
 Symlinks
 -------
 
-* ` ~/.vimrc -> ~/Dropbox/chadcdavis_dotvim/vimrc`
+* ` ~/.vimrc  -> ~/Dropbox/chadcdavis_dotvim/vimrc`
 *  `~/.gvimrc -> ~/Dropbox/chadcdavis_dotvim/gvimrc`
-*  `~/.vim -> ~/Dropbox/chadcdavis_dotvim`
+*  `~/.vim    -> ~/Dropbox/chadcdavis_dotvim`
 
 Additions
 ---------
