@@ -24,6 +24,13 @@ set guioptions-=T
 map <Leader>= <C-w>=
 imap <Leader>= <Esc> <C-w>=
 
+
+" ConqueTerm wrapper
+function StartTerm()
+  execute 'ConqueTerm ' . $SHELL . ' --login'
+  setlocal listchars=tab:\ \ 
+endfunction
+
 " Colors
 " Darks / Mids
 " color molokai
