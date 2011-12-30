@@ -1,6 +1,23 @@
 let mapleader=','
 call pathogen#infect()
 
+" ------------------------------------------------------------------------------
+" In Testing
+" ------------------------------------------------------------------------------
+
+" spacebar mapping to something useful
+map <SPACE> <C-W><C-W>
+
+" reveal current file in NERDTree and jump back
+map <LEADER>f :NERDTreeFind<CR><C-W>l
+
+" Gundo toggle
+map <Leader>g :GundoToggle<CR>
+
+" ScratchOpen
+map <Leader>s :ScratchOpen<CR>
+" ------------------------------------------------------------------------------
+
 set nocompatible
 set ruler
 
@@ -41,11 +58,12 @@ map <Leader>n :NERDTreeToggle<CR>
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 
-
 " Splits
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 set wmh=0
+
+
 
 " Remember last location in file
 if has("autocmd")
@@ -148,3 +166,9 @@ set showcmd
 set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 " Add Fugitive if it's loaded
 set statusline+=%{exists('g:loaded_fugitive')?fugitive#statusline():''}
+
+
+" vimrc editing
+if has("autocmd")
+    autocmd bufwritepost .vimrc source $MYVIMRC
+endif

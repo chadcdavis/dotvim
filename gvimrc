@@ -1,9 +1,9 @@
 if (has("gui_macvim"))
     set guifont=Menlo\ Regular:h13
-   
+
     " Fullscreen takes up entire screen
     set fuoptions=maxhorz,maxvert
-    
+
     " Command-Return for fullscreen
     macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
 
@@ -186,4 +186,9 @@ if exists("loaded_nerd_tree")
     call s:DefineCommand("e", "Edit")
     call s:DefineCommand("mkdir", "Mkdir")
     cabbrev Edit! e!
+endif
+
+" Automatically source this if edited
+if has("autocmd")
+    autocmd bufwritepost .gvimrc source $MYGVIMRC
 endif
