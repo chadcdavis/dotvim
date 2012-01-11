@@ -8,14 +8,17 @@ call pathogen#infect()
 " spacebar mapping to something useful
 map <SPACE> <C-W><C-W>
 
-" reveal current file in NERDTree and jump back
-map <LEADER>f :NERDTreeFind<CR><C-W>l
+" reveal current file in NERDTree
+map <LEADER>f :NERDTreeFind<CR>
 
 " Gundo toggle
 map <Leader>g :GundoToggle<CR>
 
 " ScratchOpen
 map <Leader>s :ScratchOpen<CR>
+
+" Make
+map <Leader>m :make<CR>
 " ------------------------------------------------------------------------------
 
 set nocompatible
