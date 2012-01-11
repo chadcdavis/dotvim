@@ -44,8 +44,8 @@ set encoding=utf-8
 set visualbell
 
 " Swap the ` and ' for marker jumping
-nnoremap ' `
-nnoremap ` '
+" nnoremap ' `
+" nnoremap ` '
 
 " Searching
 set hlsearch
