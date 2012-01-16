@@ -1,3 +1,11 @@
+# to disable pathogen plugins, add them here
+let g:pathogen_disabled = []
+
+# disable plugins when not running gui vim
+if !has('gui_running')
+    call add(g:pathogen_disabled, 'xdebug')
+endif
+
 let mapleader=','
 call pathogen#infect()
 
