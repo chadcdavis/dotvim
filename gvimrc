@@ -19,6 +19,7 @@ endif
 
 " Command-T
 let g:CommandTMaxFiles=15000
+let g:CommandTMaxHeight=20
 CommandTFlush
 
 " Start without the toolbar
@@ -32,7 +33,7 @@ endfunction
 
 " COLORS
 " Darks / Mids
-" color molokai
+color molokai
 " color desert
 " color blackboard
 " color vibrantink
@@ -41,8 +42,8 @@ endfunction
 " color freya
 " color tango
 " color vwilight
-set background=dark
-color solarized
+" set background=dark
+" color solarized
 
 " Lights
 " color eclipse

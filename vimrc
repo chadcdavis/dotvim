@@ -16,18 +16,33 @@ call pathogen#infect()
 " spacebar mapping to something useful
 map <SPACE> <C-W><C-W>
 
-" reveal current file in NERDTree
-map <LEADER>f :NERDTreeFind<CR>
-
 " Gundo toggle
 map <Leader>g :GundoToggle<CR>
+
+" ------------------------------------------------------------------------------
+
+
+" ------------------------------------------------------------------------------
+" Misc mappings I dig
+" ------------------------------------------------------------------------------
 
 " ScratchOpen
 map <Leader>s :ScratchOpen<CR>
 
+" reveal current file in NERDTree
+map <LEADER>f :NERDTreeFind<CR>
+
+" TagBarToggle... "c" for "class"
+map <Leader>c :TagbarToggle<CR>
+
 " Make
 map <Leader>m :make<CR>
 " ------------------------------------------------------------------------------
+
+" ------------------------------------------------------------------------------
+" LB Core stuff
+" ------------------------------------------------------------------------------
+ab lblog LB_Reef_Helper_Log::log ();<LEFT><LEFT>
 
 set nocompatible
 set ruler
@@ -74,6 +89,11 @@ map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 set wmh=0
 
+" Scrolling 
+set scroll=3
+set scrolloff=3
+map <C-U> kkk
+map <C-D> jjj
 
 
 " Remember last location in file
