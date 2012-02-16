@@ -1,5 +1,10 @@
 if (has("gui_macvim"))
-    set guifont=Menlo\ Regular:h13
+    " set guifont=Menlo\ Regular:h13
+    
+    " Powerline Fonts 
+    " set guifont=Menlo\ for\ Powerline:h13 " Kinda Sucks
+    " set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline:h14 "Not bad
+    set guifont=Mensch\ for\ Powerline:h13 "Yes... very similar to Menlo 14, maybe easier to read
 
     " Fullscreen takes up entire screen
     set fuoptions=maxhorz,maxvert

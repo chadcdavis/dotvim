@@ -1,6 +1,9 @@
 " to disable pathogen plugins, add them here
 let g:pathogen_disabled = []
 
+" Powerline Fancify
+let g:Powerline_symbols = 'fancy'
+
 " disable plugins when not running gui vim
 if !has('gui_running')
     call add(g:pathogen_disabled, 'xdebug')
