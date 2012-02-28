@@ -19,8 +19,9 @@ call pathogen#infect()
 " spacebar mapping to something useful
 map <SPACE> <C-W><C-W>
 
-" Gundo toggle
-map <Leader>g :GundoToggle<CR>
+" clear search highlighting
+noremap <silent><Leader>/ :nohls<CR>
+
 
 " ------------------------------------------------------------------------------
 
@@ -46,6 +47,16 @@ map <Leader>m :make<CR>
 " LB Core stuff
 " ------------------------------------------------------------------------------
 ab lblog LB_Reef_Helper_Log::log ();<LEFT><LEFT>
+
+
+" ------------------------------------------------------------------------------
+" Gundo
+" ------------------------------------------------------------------------------
+let g:gundo_width=500
+let g:gundo_preview_height=30 
+
+" toggle
+map <Leader>g :GundoToggle<CR>
 
 set nocompatible
 set ruler
