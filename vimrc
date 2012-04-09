@@ -7,6 +7,7 @@ let g:Powerline_symbols = 'fancy'
 " disable plugins when not running gui vim
 if !has('gui_running')
     call add(g:pathogen_disabled, 'xdebug')
+    call add(g:pathogen_disabled, 'powerline')
 endif
 
 let mapleader=','
@@ -22,6 +23,12 @@ map <SPACE> <C-W><C-W>
 " clear search highlighting
 noremap <silent><Leader>/ :nohls<CR>
 
+" always fat-fingering F1
+noremap <F1> <Esc>
+
+" + & - for resizing splits
+nnoremap <silent> + :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> - :exe "resize " . (winheight(0) * 2/3)<CR>
 
 " ------------------------------------------------------------------------------
 
@@ -37,7 +44,6 @@ map <Leader>s :ScratchOpen<CR>
 map <LEADER>f :NERDTreeFind<CR>
 
 " TagBarToggle... "c" for "class"
-map <Leader>c :TagbarToggle<CR>
 
 " Make
 map <Leader>m :make<CR>
@@ -47,6 +53,14 @@ map <Leader>m :make<CR>
 " LB Core stuff
 " ------------------------------------------------------------------------------
 ab lblog LB_Reef_Helper_Log::log ();<LEFT><LEFT>
+
+
+" ------------------------------------------------------------------------------
+" Tagbar
+" ------------------------------------------------------------------------------
+map <Leader>c :TagbarToggle<CR>
+let g:tagbar_autofocus=1
+let g:tagbar_autoclose=1
 
 
 " ------------------------------------------------------------------------------
@@ -104,10 +118,10 @@ map <C-K> <C-W>k<C-W>_
 set wmh=0
 
 " Scrolling 
-set scroll=3
-set scrolloff=3
-map <C-U> kkk
-map <C-D> jjj
+set scroll=5
+set scrolloff=5
+map <C-U> kkkkk
+map <C-D> jjjjj
 
 
 " Remember last location in file
@@ -131,7 +145,8 @@ endfunction
 set backspace=indent,eol,start
 
 " Filetypes
-au BufNewFile,BufRead *.{code,view,phtml} set filetype=php.html
+"au BufNewFile,BufRead *.{code,view,phtml} set filetype=php.html
+au BufNewFile,BufRead *.{code,view,phtml} set filetype=php
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
@@ -155,9 +170,9 @@ nmap <C-Down> ]e
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
 
-" Enable syntastic syntax checking
-let g:syntastic_enable_signs=1
-let g:syntastic_quiet_warnings=1
+" Syntastic Settings
+let g:syntastic_enable_signs=1 " Use signs to 
+let g:syntastic_quiet_warnings=1 " If only warnings are detected, don't show them
 
 " gist-vim defaults
 if has("mac")
