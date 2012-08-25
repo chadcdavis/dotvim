@@ -28,3 +28,11 @@ Command-T Compilation on MacVim
 
 /usr/bin/ruby extconf.rb (point to system)
 make clean && make
+
+UPKEEP of Bundles
+-----------------
+git pull in each bundle -or- from the base dir 'git submodule foreach git pull origin master'
+
+Then just git add .; git commit from the top.
+
+Changing things in a bundle is fine; you'll have to deal with any conflicts from updates, but just commit back from the top. (In other words, we obviously don't want to make changes and try to commit from the bundle's directory to the bundle's repo, not that we could anyway.)
