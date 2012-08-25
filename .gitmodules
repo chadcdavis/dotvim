@@ -61,9 +61,6 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "bundle/mru"]
-	path = bundle/mru
-	url = https://github.com/vim-scripts/mru.vim.git
 [submodule "bundle/gundo"]
 	path = bundle/gundo
 	url = https://github.com/sjl/gundo.vim.git
@@ -82,3 +79,6 @@
 [submodule "bundle/IndexedSearch"]
 	path = bundle/IndexedSearch
 	url = https://github.com/vim-scripts/IndexedSearch.git
+[submodule "bundle/vim-less"]
+	path = bundle/vim-less
+	url = https://github.com/groenewege/vim-less.git
