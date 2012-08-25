@@ -16,43 +16,52 @@ call pathogen#infect()
 " ------------------------------------------------------------------------------
 " In Testing
 " ------------------------------------------------------------------------------
+"
+" %% in the commandline resolves to the directory of the currently active
+" buffer
+cnoremap %% <C-R>=expand('%:p:h').'/'<cr>
 
-" spacebar mapping to something useful
-map <SPACE> <C-W><C-W>
+" Prepopulate a global search-and-replace with the current word under the
+" cursor
+nnoremap <C-s> :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
 
-" clear search highlighting
-noremap <silent><Leader>/ :nohls<CR>
-
-" always fat-fingering F1
-noremap <F1> <Esc>
-
-" + & - for resizing splits
-nnoremap <silent> + :exe "resize " . (winheight(0) * 3/2)<CR>
-nnoremap <silent> - :exe "resize " . (winheight(0) * 2/3)<CR>
 
 " ------------------------------------------------------------------------------
 
 
 " ------------------------------------------------------------------------------
-" Misc mappings I dig
+" Misc mappings
 " ------------------------------------------------------------------------------
 
 " ScratchOpen
 map <Leader>s :ScratchOpen<CR>
 
-" reveal current file in NERDTree
-map <LEADER>f :NERDTreeFind<CR>
-
-" TagBarToggle... "c" for "class"
-
 " Make
 map <Leader>m :make<CR>
-" ------------------------------------------------------------------------------
+
+" Quick FT Overrides
+map <leader><leader>h :set ft=html<CR>
+map <leader><leader>p :set ft=php<CR>
+map <leader><leader>j :set ft=javascript<CR>
+
+" clear search highlighting
+noremap <silent><Leader>/ :nohls<CR>
 
 " ------------------------------------------------------------------------------
-" LB Core stuff
+
+
 " ------------------------------------------------------------------------------
-ab lblog LB_Reef_Helper_Log::log ();<LEFT><LEFT>
+" Time
+" ------------------------------------------------------------------------------
+nnoremap <Leader>h :exe ":sp ~/Dropbox/time/" . strftime("%Y-%m-%d") . ".txt"<CR>
+
+
+" ------------------------------------------------------------------------------
+" Abbreviations
+" ------------------------------------------------------------------------------
+iab lblog LB_Reef_Helper_Log::log ( );<LEFT><LEFT><LEFT>
+iab ylog ylog ( );<LEFT><LEFT><LEFT>
+iab pecho <?php echo ?><LEFT><LEFT><LEFT>
 
 
 " ------------------------------------------------------------------------------
@@ -94,19 +103,24 @@ set encoding=utf-8
 
 set visualbell
 
-" Swap the ` and ' for marker jumping
-" nnoremap ' `
-" nnoremap ` '
-
 " Searching
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
 
-" NERDTree configuration
+" ------------------------------------------------------------------------------
+" NERDTree
+" ------------------------------------------------------------------------------
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
+let NERDTreeChDirMode=2 " automatically CWD to whatever NERDTree root is
 map <Leader>n :NERDTreeToggle<CR>
+map <LEADER>f :NERDTreeFind<CR>
+
+" ------------------------------------------------------------------------------
+" ACK
+" ------------------------------------------------------------------------------
+let g:ackprg="ack -i -H --nocolor --nogroup --column --type-add=php=.view,.code --type-set=liquid=.liquid --type-set=json=.json"
 
 " Tab completion
 set wildmode=list:longest,list:full
@@ -147,6 +161,7 @@ set backspace=indent,eol,start
 " Filetypes
 "au BufNewFile,BufRead *.{code,view,phtml} set filetype=php.html
 au BufNewFile,BufRead *.{code,view,phtml} set filetype=php
+au BufNewFile,BufRead *.{kml} set filetype=xml
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby

@@ -19,7 +19,8 @@ if (has("gui_macvim"))
     map <D-e> :call StartTerm()<CR>
 elseif (has("win32"))
     set guifont=Meslo_LG_M_DZ:h9:cANSI
-    map <F11> <ESC>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
+elseif (has("unix"))
+    set guifont=Meslo_LG_M_DZ:h9:cANSI
 endif
 
 " Command-T
