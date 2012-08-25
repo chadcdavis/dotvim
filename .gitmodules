@@ -10,12 +10,6 @@
 [submodule "bundle/align"]
 	path = bundle/align
 	url = https://github.com/tsaleh/vim-align.git
-[submodule "bundle/color-solarized"]
-	path = bundle/color-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule "bundle/conque-term"]
-	path = bundle/conque-term
-	url = https://github.com/rosenfeld/conque-term.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
