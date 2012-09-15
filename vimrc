@@ -26,6 +26,9 @@ cnoremap %% <C-R>=expand('%:p:h').'/'<cr>
 " cursor
 nnoremap <C-s> :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
 
+" PHP
+autocmd Filetype php set keywordprg=phpdoc.sh
+
 " ------------------------------------------------------------------------------
 
 
@@ -93,7 +96,7 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-set list listchars=tab:\ \ ,trail:·
+" set list listchars=tab:\ \ ,trail:
 
 " Status bar
 set laststatus=2
