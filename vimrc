@@ -12,6 +12,7 @@ endif
 
 let mapleader=','
 call pathogen#infect()
+call pathogen#helptags()
 
 " ------------------------------------------------------------------------------
 " In Testing
@@ -74,8 +75,8 @@ let g:tagbar_autoclose=1
 " ------------------------------------------------------------------------------
 " Gundo
 " ------------------------------------------------------------------------------
-let g:gundo_width=500
-let g:gundo_preview_height=30 
+" let g:gundo_width=500
+" let g:gundo_preview_height=30 
 
 " toggle
 map <Leader>g :GundoToggle<CR>
