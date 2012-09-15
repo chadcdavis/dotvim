@@ -25,7 +25,6 @@ cnoremap %% <C-R>=expand('%:p:h').'/'<cr>
 " cursor
 nnoremap <C-s> :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
 
-
 " ------------------------------------------------------------------------------
 
 
@@ -186,8 +185,8 @@ vmap <C-Up> [egv
 vmap <C-Down> ]egv
 
 " Syntastic Settings
-let g:syntastic_enable_signs=1 " Use signs to 
-let g:syntastic_quiet_warnings=1 " If only warnings are detected, don't show them
+" let g:syntastic_enable_signs=1 " Use signs to 
+" let g:syntastic_quiet_warnings=1 " If only warnings are detected, don't show them
 
 " gist-vim defaults
 if has("mac")
