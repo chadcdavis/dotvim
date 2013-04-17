@@ -29,6 +29,10 @@ nnoremap <C-s> :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
 " PHP
 autocmd Filetype php set keywordprg=phpdoc.sh
 
+" PHPCS
+" let g:syntastic_phpcs_conf = "--standard=PSR2"
+let g:syntastic_phpcs_disable = 1
+
 " ------------------------------------------------------------------------------
 
 
@@ -50,13 +54,33 @@ map <leader><leader>j :set ft=javascript<CR>
 " clear search highlighting
 noremap <silent><Leader>/ :nohls<CR>
 
+" left/right for indenting
+" nmap <silent><left> <<
+" nmap <silent><right> >> 
+" vmap <silent><left> <
+" vmap <silent><right> >
+" imap <silent><left><c-d>
+" imap <silent><right><c-t>
+" actually what I probably want is for normal mapping to...
+" left = <, right = >, down inserts new line, up does a 'J'
+" I think I would be fine with just the indenting/nonindenting but something
+" is messing up the mapping to left... check to see what that is
+
+
 " ------------------------------------------------------------------------------
 
 
 " ------------------------------------------------------------------------------
 " Time
 " ------------------------------------------------------------------------------
-nnoremap <Leader>h :exe ":sp ~/Dropbox/time/" . strftime("%Y-%m-%d") . ".txt"<CR>
+nnoremap <Leader>h :exe ":sp ~/Dropbox/time/" . strftime("%Y-%m-%d") . ".md"<CR>
+
+" ------------------------------------------------------------------------------
+" TextWrangler for Other People to Use My Machine
+" ------------------------------------------------------------------------------
+nnoremap <Leader>w :!open -a TextWrangler %<CR>
+
+
 
 
 " ------------------------------------------------------------------------------
@@ -71,7 +95,7 @@ iab pecho <?php echo ?><LEFT><LEFT><LEFT>
 " Tagbar
 " ------------------------------------------------------------------------------
 map <Leader>c :TagbarToggle<CR>
-let g:tagbar_autofocus=1
+" let g:tagbar_autofocus=1
 let g:tagbar_autoclose=1
 
 
@@ -123,7 +147,7 @@ map <LEADER>f :NERDTreeFind<CR>
 " ------------------------------------------------------------------------------
 " ACK
 " ------------------------------------------------------------------------------
-let g:ackprg="ack -i -H --nocolor --nogroup --column --type-add=php=.view,.code --type-set=liquid=.liquid --type-set=json=.json"
+let g:ackprg="ack -i -H --nocolor --nogroup --column --type-add=css=.less --type-add=php=.view,.code --type-set=liquid=.liquid --type-set=json=.json"
 
 " Tab completion
 set wildmode=list:longest,list:full

@@ -17,6 +17,9 @@ if (has("gui_macvim"))
 
     " Command-e for ConqueTerm
     map <D-e> :call StartTerm()<CR>
+
+    set guioptions+=c. 
+
 elseif (has("win32"))
     set guifont=Meslo_LG_M_DZ:h9:cANSI
 elseif (has("unix"))
@@ -24,7 +27,7 @@ elseif (has("unix"))
 endif
 
 " Command-T
-let g:CommandTMaxFiles=15000
+let g:CommandTMaxFiles=30000
 let g:CommandTMaxHeight=20
 CommandTFlush
 
