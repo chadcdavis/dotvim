@@ -1,3 +1,5 @@
+let g:vdebug_options = {'path_maps' : {"/var/www" : "/Users/chaddavis/Sites/ebt/ebtcom_modx"}, 'server' : '0.0.0.0'}
+
 " to disable pathogen plugins, add them here
 let g:pathogen_disabled = []
 
@@ -200,6 +202,8 @@ au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
 au BufNewFile,BufRead *.json set ft=javascript
 
 au BufRead,BufNewFile *.txt call s:setupWrapping()
+
+au BufNewFile,BufRead *.xt set ft=xt
 
 syntax on
 filetype plugin indent on

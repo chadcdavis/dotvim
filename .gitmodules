@@ -43,12 +43,6 @@
 [submodule "bundle/zoomwin"]
 	path = bundle/zoomwin
 	url = https://github.com/vim-scripts/ZoomWin.git
-[submodule "bundle/snipmate"]
-	path = bundle/snipmate
-	url = https://github.com/msanders/snipmate.vim.git
-[submodule "bundle/snipmate-snippets"]
-	path = bundle/snipmate-snippets
-	url = https://github.com/scrooloose/snipmate-snippets.git
 [submodule "bundle/searchfold"]
 	path = bundle/searchfold
 	url = https://github.com/vim-scripts/searchfold.vim.git
@@ -88,3 +82,21 @@
 [submodule "bundle/vdebug"]
 	path = bundle/vdebug
 	url = git@github.com:joonty/vdebug.git
+[submodule "vim-shootingstar"]
+	path = vim-shootingstar
+	url = git@github.com:jceb/vim-shootingstar.git
+[submodule "bundle/vim-shootingstar"]
+	path = bundle/vim-shootingstar
+	url = git@github.com:jceb/vim-shootingstar.git
+[submodule "bundle/thumbnail"]
+	path = bundle/thumbnail
+	url = git@github.com:itchyny/thumbnail.vim.git
+[submodule "indentLine"]
+	path = indentLine
+	url = https://github.com/Yggdroot/indentLine.git
+[submodule "bundle/indentline"]
+	path = bundle/indentline
+	url = https://github.com/Yggdroot/indentLine.git
+[submodule "bundle/puppet-syntax-vim"]
+	path = bundle/puppet-syntax-vim
+	url = git@github.com:puppetlabs/puppet-syntax-vim.git
