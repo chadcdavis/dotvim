@@ -23,12 +23,6 @@ Add packages as git submodule pathogen bundles
 
 `git submodule init && git submodule update`
 
-Command-T Compilation on MacVim
--------------------------------
-
-/usr/bin/ruby extconf.rb (point to system)
-make clean && make
-
 UPKEEP of Bundles
 -----------------
 git pull in each bundle -or- from the base dir 'git submodule foreach git pull origin master'
