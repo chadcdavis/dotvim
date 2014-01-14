@@ -4,10 +4,10 @@ if (has("gui_macvim"))
     " Powerline Fonts 
     " set guifont=Menlo\ for\ Powerline:h13 " Kinda Sucks
     " set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline:h14 "Not bad
-    set guifont=Mensch\ for\ Powerline:h13 "Yes... very similar to Menlo 14, maybe easier to read
+    " set guifont=Menlo\ for\ Powerline:h13 "Yes... very similar to Menlo 14, maybe easier to read
 
-    " Fullscreen takes up entire screen
-    set fuoptions=maxhorz,maxvert
+    set guifont=Source\ Code\ Pro\ for\ Powerline:h13
+    " set guifont=Inconsolata\ for\ Powerline:h15
 
     " Command-Return for fullscreen
     macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
@@ -15,8 +15,7 @@ if (has("gui_macvim"))
     " Command-Shift-F for Ack
     map <D-F> :Ack!<space>
 
-    " Command-e for ConqueTerm
-    map <D-e> :call StartTerm()<CR>
+    map <LEADER>i :IndentGuidesToggle<CR>
 
     set guioptions+=c. 
 
@@ -27,38 +26,15 @@ elseif (has("unix"))
 endif
 
 " Command-T
-let g:CommandTMaxFiles=30000
-let g:CommandTMaxHeight=20
-CommandTFlush
+" let g:CommandTMaxFiles=30000
+" let g:CommandTMaxHeight=20
+" CommandTFlush
 
 " Start without the toolbar
 set guioptions-=T
 
-" ConqueTerm wrapper
-function StartTerm()
-    execute 'ConqueTerm ' . $SHELL . ' --login'
-    setlocal listchars=tab:\ \ 
-endfunction
-
 " COLORS
-" Darks / Mids
 color molokai
-" color desert
-" color blackboard
-" color vibrantink
-" color vividchalk
-" color darkblue2
-" color freya
-" color tango
-" color vwilight
-" set background=dark
-" color solarized
-
-" Lights
-" color eclipse
-" color github
-" color nuvola
-" color soso
 
 " NERDTree Stuff
 if exists("loaded_nerd_tree")
@@ -111,9 +87,9 @@ function s:UpdateNERDTree(...)
         endif
     endif
 
-    if exists(":CommandTFlush") == 2
-        CommandTFlush
-    endif
+    " if exists(":CommandTFlush") == 2
+    "     CommandTFlush
+    " endif
 endfunction
 
 " Utility functions to create file commands

@@ -1,18 +1,21 @@
-let g:vdebug_options = {'path_maps' : {"/var/www" : "/Users/chaddavis/Sites/ebt/ebtcom_modx"}, 'server' : '0.0.0.0'}
+let g:vdebug_options = {'path_maps' : {"/var/www" : "/Users/chaddavis/sites/ebt/ebtcom_modx"}, 'server' : '0.0.0.0'}
 
 " to disable pathogen plugins, add them here
 let g:pathogen_disabled = []
 
 " Powerline Fancify
-let g:Powerline_symbols = 'fancy'
+" let g:Powerline_symbols = 'fancy'
+
+let g:airline_powerline_fonts = 1
 
 " disable plugins when not running gui vim
 if !has('gui_running')
     call add(g:pathogen_disabled, 'xdebug')
-    call add(g:pathogen_disabled, 'powerline')
+    call add(g:pathogen_disabled, 'vim-airline')
 endif
 
 let mapleader=','
+
 call pathogen#infect()
 call pathogen#helptags()
 
@@ -149,7 +152,7 @@ map <LEADER>f :NERDTreeFind<CR>
 " ------------------------------------------------------------------------------
 " ACK
 " ------------------------------------------------------------------------------
-let g:ackprg="ack -i -H --nocolor --nogroup --column --type-add=css=.less --type-add=php=.view,.code --type-set=liquid=.liquid --type-set=json=.json"
+" let g:ackprg="ack -i -H --nocolor --nogroup --column --type-add=css=.less --type-add=php=.view,.code --type-set=liquid=.liquid --type-set=json=.json"
 
 " Tab completion
 set wildmode=list:longest,list:full
