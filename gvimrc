@@ -12,8 +12,8 @@ if (has("gui_macvim"))
     " Command-Return for fullscreen
     macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
 
-    " Command-Shift-F for Ack
-    map <D-F> :Ack!<space>
+    " Command-Shift-F for Ag
+    map <D-F> :Ag -S<space>
 
     map <LEADER>i :IndentGuidesToggle<CR>
 

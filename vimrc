@@ -1,5 +1,3 @@
-let g:vdebug_options = {'path_maps' : {"/var/www" : "/Users/chaddavis/sites/ebt/ebtcom_modx"}, 'server' : '0.0.0.0'}
-
 " to disable pathogen plugins, add them here
 let g:pathogen_disabled = []
 
@@ -22,7 +20,11 @@ call pathogen#helptags()
 " ------------------------------------------------------------------------------
 " In Testing
 " ------------------------------------------------------------------------------
-"
+let g:vdebug_options = {'path_maps' : {"/var/www" : "/Users/chaddavis/sites/ebt/ebtcom_modx"}, 'server' : '0.0.0.0'}
+
+map <leader>t :NERDTree ~/.vim-airline-todo<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>
+
 " %% in the commandline resolves to the directory of the currently active
 " buffer
 cnoremap %% <C-R>=expand('%:p:h').'/'<cr>
