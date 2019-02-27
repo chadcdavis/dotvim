@@ -1,3 +1,8 @@
+let g:ctrlp_max_files = 0
+let g:jsx_ext_required = 0
+let g:javascript_enable_domhtmlcss = 1
+let g:javascript_ignore_javaScriptdoc = 1
+
 " to disable pathogen plugins, add them here
 let g:pathogen_disabled = []
 
@@ -20,7 +25,13 @@ call pathogen#helptags()
 " ------------------------------------------------------------------------------
 " In Testing
 " ------------------------------------------------------------------------------
-let g:vdebug_options = {'path_maps' : {"/var/www" : "/Users/chaddavis/sites/ebt/ebtcom_modx"}, 'server' : '0.0.0.0'}
+" let g:vdebug_options = {'path_maps' : {"/var/www/laravel" : "/Users/chaddavis/sites/ebt/credit_transaction_upload_tool/laravel/"}, 'server' : '0.0.0.0'}
+" let g:vdebug_options = {'path_maps' : {"/var/www/laravel/" : "/Users/chaddavis/Projects/ebt/ebt_passport/laravel/"}, 'server' : '0.0.0.0'}
+" let g:vdebug_options = {'path_maps' : {"/var/www/mageroot/" : "/Users/chaddavis/Projects/ebt/ebt_ecom/mageroot/"}, 'server' : '0.0.0.0'}
+" let g:vdebug_options = {'path_maps' : {"/var/www/" : "/Users/chaddavis/Projects/ebt/ebt_modx_website/"}, 'server' : '0.0.0.0'}
+" let g:vdebug_options = {'path_maps' : {"/var/www/laravel/" : "/Users/chaddavis/Projects/ccd/BrendaHouston-Filemaker/laravel/"}, 'server' : '0.0.0.0'}
+" let g:vdebug_options = {'path_maps' : {"/var/www/" : "/Users/chaddavis/Projects/sga/sga_sgaonline/"}, 'server' : '0.0.0.0'}
+" let g:vdebug_options = {'path_maps' : {"/var/www/laravel/" : "/Users/chaddavis/Projects/ebt/ebt_ebtapi/laravel/"}, 'server' : '0.0.0.0'}
 
 map <leader>t :NERDTree ~/.vim-airline-todo<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
@@ -57,6 +68,7 @@ map <Leader>m :make<CR>
 map <leader><leader>h :set ft=html<CR>
 map <leader><leader>p :set ft=php<CR>
 map <leader><leader>j :set ft=javascript<CR>
+map <leader><leader>x :set ft=jsx<CR>
 
 " clear search highlighting
 noremap <silent><Leader>/ :nohls<CR>
@@ -178,14 +190,14 @@ if has("autocmd")
     \| exe "normal g'\"" | endif
 endif
 
-function s:setupWrapping()
-  set wrap
-  set wrapmargin=2
-  set textwidth=72
-endfunction
+"function s:setupWrapping()
+" set wrap
+" set wrapmargin=2
+" set textwidth=72
+"endfunction
 
 function s:setupMarkup()
-  call s:setupWrapping()
+  "call s:setupWrapping()
   map <buffer> <Leader>p :Hammer<CR>
 endfunction
 
@@ -206,7 +218,7 @@ au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
 " add json syntax highlighting
 au BufNewFile,BufRead *.json set ft=javascript
 
-au BufRead,BufNewFile *.txt call s:setupWrapping()
+" au BufRead,BufNewFile *.txt call s:setupWrapping()
 
 au BufNewFile,BufRead *.xt set ft=xt
 
@@ -239,8 +251,8 @@ set modeline
 set modelines=10
 
 " Directories for swp files
-set backupdir=~/.vim/backup
-set directory=~/.vim/backup
+set backupdir=/tmp
+set directory=/tmp
 
 " Turn off jslint errors by default
 let g:JSLintHighlightErrorLine = 0
@@ -274,9 +286,9 @@ set showcmd
 "   %{fugitive#statusline()}
 
 " Base Statusline
-set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
+" set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 " Add Fugitive if it's loaded
-set statusline+=%{exists('g:loaded_fugitive')?fugitive#statusline():''}
+" set statusline+=%{exists('g:loaded_fugitive')?fugitive#statusline():''}
 
 
 " vimrc editing
